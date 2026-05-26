@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 dataset/
 animal_model.keras
+.idea/
