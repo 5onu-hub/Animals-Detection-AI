@@ -1,4 +1,4 @@
-# app.py
+
 
 import streamlit as st
 import numpy as np
@@ -7,15 +7,10 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
-# =========================
-# LOAD MODEL
-# =========================
 
 model = load_model("animal_model.keras")
 
-# =========================
-# CLASS LABELS
-# =========================
+
 
 classes = {
     0: ' Antelope',
@@ -110,18 +105,14 @@ classes = {
     89: ' Zebra'
 }
 
-# =========================
-# PAGE CONFIG
-# =========================
+
 
 st.set_page_config(
     page_title="Animal Detection AI",
     page_icon="🐾"
 )
 
-# =========================
-# UI
-# =========================
+
 
 st.title("🐾 Animal Detection AI")
 
@@ -132,9 +123,7 @@ uploaded_file = st.file_uploader(
     type=["jpg", "jpeg", "png"]
 )
 
-# =========================
-# PREDICTION
-# =========================
+
 
 if uploaded_file is not None:
 
@@ -145,22 +134,22 @@ if uploaded_file is not None:
         use_container_width=True
     )
 
-    # Load image
+
     img = image.load_img(
         uploaded_file,
         target_size=(224, 224)
     )
 
-    # Convert image to array
+
     img_array = image.img_to_array(img)
 
-    # Expand dimensions
+
     img_array = np.expand_dims(img_array, axis=0)
 
-    # Preprocess
+
     img_array = preprocess_input(img_array)
 
-    # Prediction
+
     prediction = model.predict(img_array)
 
     predicted_class = np.argmax(prediction)
@@ -169,9 +158,7 @@ if uploaded_file is not None:
 
     result = classes[predicted_class]
 
-    # =========================
-    # LOW CONFIDENCE CHECK
-    # =========================
+
 
     if confidence < 60:
 
