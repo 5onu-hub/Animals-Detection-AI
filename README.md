@@ -27,7 +27,6 @@ The application uses **Transfer Learning** with MobileNetV2 for accurate and eff
 
 ## Home Page
 
-Add screenshot here 👇
 
 ```md
 ![Home Page](screenshots/home.png)
@@ -272,13 +271,10 @@ To contribute:
 
 ---
 
-#  License
 
-This project is licensed under the MIT License.
 
 ---
 
-#  Developer
 
 ## Sonu Thakur
 
