@@ -23,25 +23,17 @@ The application uses **Transfer Learning** with MobileNetV2 for accurate and eff
 
 ---
 
-#  Screenshots
+## 📸 Screenshots
 
-## Home Page
+## 🏠 Home Page
 
-
-```md
-![Home Page](screenshots/home.png)
-```
+![Home Page](./screenshots/home.png)
 
 ---
 
-## Prediction Example
+## 🔍 Prediction Example
 
-```md
-![Prediction](screenshots/prediction.png)
-```
-
----
-
+![Prediction](./screenshots/prediction.png)s
 # 🛠 Tech Stack
 
 | Technology | Usage |
